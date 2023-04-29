@@ -1,10 +1,8 @@
 const express = require('express');
-
-
 const router = express.Router();
 
-router.get('/',(req,res,next) => {
-    res.send("this is from routes")
-})
+const foodController = require("../controllers/food")
+
+router.get('/',foodController.getAllFoods)
 
 module.exports = router;
