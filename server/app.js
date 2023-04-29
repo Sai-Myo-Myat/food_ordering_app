@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 
 
 const foodRouter = require("./routes/food");
+const customerRouter = require('./routes/customer')
 
 require('dotenv').config()
 
@@ -10,7 +11,8 @@ const app = express();
 
 app.use(express.json()) // applications/json
 
-app.use('/foods',foodRouter)
+app.use('/foods',foodRouter);
+app.use('/customers', customerRouter);
 
 mongoose
     .connect(
