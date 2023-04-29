@@ -10,7 +10,7 @@ const app = express();
 
 app.use(express.json()) // applications/json
 
-app.use('/food',foodRouter)
+app.use('/foods',foodRouter)
 
 mongoose
     .connect(
